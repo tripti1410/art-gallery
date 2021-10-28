@@ -76,18 +76,3 @@ a {
   font-weight: var(--font-weight-700);
   letter-spacing: 1px;
 }
-
-.menu-item {
-  display: inline;
-  list-style: none;
-  padding: 0 1rem;
-  cursor: pointer;
-}
-.menu-item > a {
-  text-decoration: none;
-}
-.menu-item:hover,
-.menu-item:focus {
-  text-decoration: underline;
-  transition: all 0.2s ease-in-out;
-}
