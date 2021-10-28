@@ -8,18 +8,21 @@
   padding-inline: 1rem;
   overflow: hidden;
 }
+.container > * {
+  width: 100%;
+  margin-bottom: 7rem;
+}
+
 /* Header */
 
 .main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 .main-header__logo {
   color: var(--text-color);
 }
-
 .main-header > nav {
   justify-self: end;
   text-align: right;
@@ -37,9 +40,6 @@
   text-decoration: underline;
   transition: all 0.2s ease-in-out;
 }
-section {
-  display: none;
-}
 
 @media (min-width: 480px) {
   .main-header > nav {
@@ -48,4 +48,166 @@ section {
   .menu-item {
     display: inline;
   }
+}
+
+/* Section 1 (Intro) */
+.intro-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  text-align: center;
+}
+.intro-section__lead {
+  font-size: var(--font-jumbo);
+  font-family: var(--secondary-font-family);
+  font-weight: var(--font-weight-700);
+  line-height: 1.2;
+}
+.intro-section__title {
+  font-weight: var(--font-weight-400);
+}
+@media (min-width: 769px) {
+  .intro-section {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: max-content max-content 1fr;
+  }
+  .intro-section__art-display-svg {
+    grid-row: 1/ -1;
+  }
+  .intro-section__high-five-svg {
+    grid-column: 3;
+    grid-row: 1/-1;
+  }
+}
+
+/* Section 2 (Who you are) */
+.who-you-are-sec {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2rem;
+}
+
+.who-you-are-sec__item {
+  border: 2px solid;
+  text-align: center;
+  padding-block: 2rem;
+}
+.who-you-are-sec__item-title {
+  font-family: var(--secondary-font-family);
+  font-size: var(--font-l);
+  font-weight: var(--font-weight-700);
+}
+
+/* Section 3 About us */
+.about-us-sec {
+  display: grid;
+  grid-row-gap: 2rem;
+  justify-items: center;
+}
+
+.about-us-sec__accordian-item h3 {
+  font-family: var(--secondary-font-family);
+  font-size: var(--font-xl);
+  padding-bottom: 1.8rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--clr-dark);
+}
+@media (min-width: 480px) {
+  .about-us-sec {
+    grid-template-columns: 1fr 2fr 1.5fr;
+    grid-template-rows: 20px 20px 1fr;
+    justify-items: normal;
+    grid-column-gap: 2rem;
+  }
+  .about-us-sec .section-title {
+    grid-row: 2;
+  }
+  .about-us-sec > p {
+    grid-column: 2 / -1;
+  }
+  .about-us-sec__svg {
+    grid-row: 5;
+    grid-column: 1 / span 2;
+  }
+  .about-us-sec__accordian {
+    grid-column: 3 / -1;
+    grid-row: 5;
+  }
+}
+
+/* Section 4 upcoming exhibition */
+.exhibition {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+}
+.exhibition__img {
+  width: 300px;
+  height: 300px;
+  border: 2px solid;
+}
+
+@media (min-width: 768px) {
+  .exhibition {
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: repeat(4, max-content);
+    grid-gap: 0;
+    margin-bottom: 10rem;
+    margin-top: 5rem;
+  }
+  .exhibition:nth-of-type(2) {
+    grid-template-columns: 1fr 300px;
+  }
+  .exhibition__date::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3rem;
+    width: 100%;
+    border-top: 2px solid;
+  }
+  .exhibition > *:where(:not(.exhibition__img)) {
+    grid-column: 2;
+    padding-left: 6rem;
+  }
+  .exhibition__img {
+    grid-row: 1/-1;
+  }
+  .exhibition__date {
+    position: relative;
+    padding-top: 5rem;
+  }
+  .exhibition:nth-child(even) > *:where(:not(.exhibition__img)) {
+    grid-column: 1;
+    padding-right: 6rem;
+    padding-left: 0;
+  }
+  .exhibition:nth-child(even) .exhibition__img {
+    grid-column: 2;
+  }
+}
+
+/* Section 5 Testimonial  */
+.testimonial-sec {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  align-items: center;
+}
+.testimonial-sec button {
+  height: fit-content;
+}
+.testimonial-sec .testimonials {
+  width: 200%;
+  overflow-x: hidden;
+  text-align: center;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 2rem;
+  margin-inline: 2rem;
+  font-family: var(--secondary-font-family);
+  font-size: var(--font-xl);
 }
