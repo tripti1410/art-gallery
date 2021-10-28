@@ -1,0 +1,93 @@
+:root {
+  --primary-font-family: "Work Sans", sans-serif;
+  --secondary-font-family: "Crimson Text", serif;
+
+  --clr-dark: #003666;
+  --clr-light: #ffd662;
+
+  --font-jumbo: 3.125rem;
+  --font-xxl: 2.813rem;
+  --font-xl: 1.875rem;
+  --font-l: 1.563rem;
+  --font-m: 1.25rem;
+  --font-s: 1.125rem;
+  --font-xs: 1rem;
+
+  --font-weight-100: 100;
+  --font-weight-200: 200;
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+  /* Note secondary font only containe 400,600 and 700 */
+}
+/* Reset styles */
+body {
+  font-family: var(--primary-font-family);
+  font-size: var(--font-s);
+  line-height: 1.5;
+  font-weight: var(--font-weight-400);
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+button {
+  color: inherit;
+  font-family: inherit;
+}
+a {
+  color: inherit;
+}
+/* Utility classes */
+.btn {
+  background-color: transparent;
+  border: 2px solid #003666;
+  border-radius: 2.5rem;
+  padding: 0.8rem 2rem;
+  width: fit-content;
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-s);
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.link {
+  font-weight: var(--font-weight-700);
+  letter-spacing: 1px;
+}
+
+.menu-item {
+  display: inline;
+  list-style: none;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.menu-item > a {
+  text-decoration: none;
+}
+.menu-item:hover,
+.menu-item:focus {
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
