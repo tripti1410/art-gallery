@@ -200,14 +200,33 @@
   height: fit-content;
 }
 .testimonial-sec .testimonials {
-  width: 200%;
-  overflow-x: hidden;
-  text-align: center;
-  display: flex;
+  position: relative;
+  display: grid;
   justify-items: center;
   align-items: center;
   grid-gap: 2rem;
   margin-inline: 2rem;
   font-family: var(--secondary-font-family);
   font-size: var(--font-xl);
+}
+.testimonials > * {
+  position: absolute;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+}
+.testimonials > * author {
+  grid-column: 2;
+}
+/* .testimonials > *:not(:first-child) {
+  visibility: hidden;
+  opacity: 0;
+} */
+#next-slide,
+#prev-slide {
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
 }

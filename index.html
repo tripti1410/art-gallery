@@ -361,12 +361,12 @@
       </div>
     </section>
     <section class="testimonial-sec">
-      <button>Pre</button>
+      <button id="prev-slide"><svg viewBox="0 0 448 512" width="30" title="angle-double-left">
+          <path
+            d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z" />
+        </svg></button>
       <div class="testimonials">
-        <div>
-
-          <P>It is a long established fact that a reader will be distracted by the readable content of a page when
-            looking at its layout. </P>
+        <div class="testimonial">
           <svg xmlns="http://www.w3.org/2000/svg" width="80" viewBox="0 0 676 676"
             xmlns:xlink="http://www.w3.org/1999/xlink">
             <title>female_avatar</title>
@@ -426,12 +426,11 @@
             <ellipse cx="688.30226" cy="498.02747" rx="19.88888" ry="8.28703"
               transform="translate(-113.09381 1042.41397) rotate(-86.47577)" fill="#d0cde1" />
           </svg>
-          <author>ABS</author>
-        </div>
-        <div>
-
           <P>It is a long established fact that a reader will be distracted by the readable content of a page when
             looking at its layout. </P>
+          <author>-John Smith</author>
+        </div>
+        <div class="testimonial">
           <svg xmlns="http://www.w3.org/2000/svg" width="80" viewBox="0 0 676 676"
             xmlns:xlink="http://www.w3.org/1999/xlink">
             <title>male_avatar</title>
@@ -471,12 +470,12 @@
             <path d="M856.67,576.32l52.99,9.36A337.94434,337.94434,0,0,1,852.9,674.25Z" transform="translate(-262 -112)"
               fill="#2f2e41" />
           </svg>
-          <author>CGD</author>
-        </div>
-        <div>
-
           <P>It is a long established fact that a reader will be distracted by the readable content of a page when
             looking at its layout. </P>
+          <author>Annie</author>
+        </div>
+        <div class="testimonial">
+
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80"
             viewBox="0 0 698 698">
             <defs>
@@ -515,12 +514,16 @@
             <ellipse cx="194.86" cy="372.3" rx="14.09" ry="26.42" fill="#fdb797" />
             <ellipse cx="497.8" cy="372.3" rx="14.09" ry="26.42" fill="#fdb797" />
           </svg>
+          <P>It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout. </P>
           <author>huyt</author>
         </div>
       </div>
 
-      <button>NEXT</button>
-
+      <button id="next-slide"><svg viewBox="0 0 448 512" width="30" title="angle-double-right">
+          <path
+            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z" />
+        </svg></button>
     </section>
 
 
@@ -1152,6 +1155,8 @@
       </span>
     </footer> -->
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="./main.js"></script>
 </body>
 
 </html>
